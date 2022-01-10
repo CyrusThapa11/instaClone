@@ -6,9 +6,6 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/keys");
 const verify = require("../mwares/verify");
 
-router.get("/", (req, res) => {
-  res.send("Hi");
-});
 
 router.post("/signup", async (req, res) => {
   const { name, email, password,profile } = req.body;

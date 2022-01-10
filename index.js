@@ -32,9 +32,6 @@ const userRoute = require("./routes/auth");
 app.use("/user", userRoute);
 app.use("/posts", postsRoute);
 
-app.get("/", (req, res) => {
-  res.send("Hi bois");
-});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static('client/build'))
